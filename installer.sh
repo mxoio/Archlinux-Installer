@@ -89,7 +89,7 @@ fi
 
 # Update mirrors for faster downloads
 log "Updating pacman mirrors..."
-reflector --country US --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+reflector --country GB,DE,NL --age 12 --protocol https --sort rate --timeout 10 --save /etc/pacman.d/mirrorlist || echo "Mirror update failed, using default mirrors"
 
 # Partition the disk
 log "Partitioning disk $MAIN_DRIVE..."

@@ -28,7 +28,7 @@ error() {
 }
 
 # Configuration variables (modify these as needed)
-TIMEZONE="Europe/London"  # Change to your timezone
+TIMEZONE="America/New_York"  # Change to your timezone
 LOCALE="en_US.UTF-8"
 KEYMAP="us"
 HOSTNAME="arch-dev"
@@ -89,7 +89,7 @@ fi
 
 # Update mirrors for faster downloads
 log "Updating pacman mirrors..."
-reflector --country GB,DE,NL --age 12 --protocol https --sort rate --timeout 10 --save /etc/pacman.d/mirrorlist || echo "Mirror update failed, using default mirrors"
+reflector --country US --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 # Partition the disk
 log "Partitioning disk $MAIN_DRIVE..."
@@ -146,7 +146,7 @@ EOF
 pacman -S --noconfirm grub efibootmgr networkmanager network-manager-applet \
     wireless_tools wpa_supplicant dialog os-prober mtools dosfstools \
     reflector git curl wget vim nano sudo zsh fish tmux htop neofetch \
-    firefox chromium code nodejs npm python python-pip docker docker-compose \
+    firefox chromium nodejs npm python python-pip docker docker-compose \
     wireshark-qt nmap tcpdump netcat traceroute iperf3 openssh \
     plasma-meta kde-applications sddm sddm-kcm packagekit-qt5
 

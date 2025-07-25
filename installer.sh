@@ -28,7 +28,7 @@ error() {
 }
 
 # Configuration variables (modify these as needed)
-TIMEZONE="America/New_York"  # Change to your timezone
+TIMEZONE="Europe/London"  # Change to your timezone
 LOCALE="en_US.UTF-8"
 KEYMAP="us"
 HOSTNAME="arch-dev"
